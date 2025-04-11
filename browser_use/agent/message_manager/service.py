@@ -131,7 +131,7 @@ class MessageManager:
 						last_line = r.error.split('\n')[-1]
 						msg = HumanMessage(content='Action error: ' + last_line)
 						self._add_message_with_tokens(msg)
-					result = None  # if result in history, we dont want to add it again
+			result = None  # if result in history, we dont want to add it again
 
 		# otherwise add state message and result to next message (which will not stay in memory)
 		state_message = AgentMessagePrompt(
